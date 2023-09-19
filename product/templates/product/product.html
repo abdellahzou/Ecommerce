@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 {% block content %}
 <div class="max-w-6xl mx-auto flex flex-wrap py-6 px-6 xl:px-0">
-    <div class="images w-full  mb-6 lg:mb-0 md:w-1/3 ">
+    <div class="images w-full  mb-6 lg:mb-0 md:w-1/3">
         <img src="{% if product.image %}{{product.image.url}}{% else %}https://via.placeholder.com/240x240x.jpg {% endif %}" class="rounded-xl">
     </div>
     <div class="information w-full md:w-2/5 md:p-6">
