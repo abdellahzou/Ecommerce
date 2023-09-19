@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="bg-white hover:bg-gray-900">
+    <div class="flex justify-between py-4">
+        <!-- Category 1 Button -->
+        <a href="#" class="flex-1 text-center bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded-l-lg transition duration-300">Category 1</a>
+        
+        <!-- Category 2 Button -->
+        <a href="#" class="flex-1 text-center bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 transition duration-300">Category 2</a>
+        
+        <!-- Category 3 Button -->
+        <a href="#" class="flex-1 text-center bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded-r-lg transition duration-300">Category 3</a>
+    </div>
+</div>
+<div class="max-w-6xl mx-auto py-2 px-6 xl:px-0">
+    <div class="products grid grid-cols-2 gap-4 p-4  sm:grid-cols-2 lg:grid-cols-5">
+        {% for product in products %}
+        {% include 'product/partials/product_list_item.html' %}
+        {% endfor %}
+</div>
+{% endblock %}
